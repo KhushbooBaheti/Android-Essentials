@@ -1,0 +1,97 @@
+1). remove the auto generated  codde in build.gradle when you create a new project as below:
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.3'
+}
+
+2). difference between shared preferences and singleton
+		
+	is that shared preferences is used for permanent storage on the app whereas singleton is used for temporary storage of objects or list etc.
+
+3). to start an android app from command line we can do:
+
+	adb shell am start -n com.package.name/com.package.name.ActivityName
+
+4). a ui component of xml (new thing heard):
+	
+	chronometer -create a simple timer on screen
+
+5). Android glide library is used to handle your image loading requests(Retrofit).
+
+6). Aysnc Task: As we cannot run n etwork on the main thread as it will take a lot of time and will csuse the appp to crash so we ,Run the network task on the secondary execution thread.
+	Aysnc thread allows us to run a task on background thread,while publishing resullts to the UI thread(main thread).
+	Aysnc Task is a generic class ,meaning that it takes parameterized types in it constructors.
+ 
+7). UI thread has a message queue and a handler to process runnable objects from other threads.
+
+8). while creating the adapter we need to override 3 functions that are onCreateViewHolder(),onBIndViewHolder(),getItemCount().
+
+9). Intents are of two typesexplicit and implicit intents:An application can define the target component directly in the intent (explicit intent) or ask the Android system to evaluate registered components based on the intent data(implicit intents).
+	example:
+		Opening a web link would be an implicit intent because you aren’t specifying a specific browser to use, the user gets to choose.
+
+Opening an activity uses an explicit intent because you know exactly where to go.
+
+Sharing content to Twitter is a bit of a curveball. We’ve taught you the best way to do it using an implicit intent. It is possible as an explicit intent but not recommended.
+
+	#see putExtra method and getExtra method
+
+10). putParsable method of bundle class: bundle class is used as arguemnet in onSaveInstanceState() method which is used to pass data in serialzed from netween the processes :how to output an object in a sttrem of data and how to recreate the object from the stream ***NOTE***(see the udacity ud-851 level 5 lifecycles persisting data part 2)
+
+
+11). Loaders run beyond th activity lifecycle they prevent dual similar parallel running of threads.
+
+12).AsyncTaskLoader is a better choice for Activity-bound thread management, because it handles lifecycle changes correctly, delivering the result to the current active activity, preventing duplication of background threads, and helping to eliminate duplication of zombie activities.
+
+
+13).Preference fragments : used to save the settings as per the user prefernces.we need to add a dependency in the build.gradle file of preferences support.
+
+14).Choice Paralysis: what all features to be made as settings.
+
+15).Create Remove Update Delete:CRUD (related to database).
+
+16).recycler view has a tag object :it's meant to store any data that does'nt need to be displayed.
+
+17).Content provider: the sqlite database is private to the app this means each app has its own database which is private to it so how can two apps read data from same datasource?:by using content providers.
+
+18).We write the app permissions in the android manifest file.
+
+19).Whenever we need to use a content provider we need to use it through content resolver.
+
+20).URI stands for uniform resource Identifier and URL are the subsets of URI which stands for Uniform resource Locator.URl are specifically meant for network locations that is websites and web files.
+
+21).database operations like reading from content provider should be called in a diff thread from the main thread so use Async Task.
+
+
+
+*********
+22).TODO LIST CODE
+
+THE CODE FOR THIS APP CAN BE FOUND IN THE LESSON09-TODO-LIST FOLDER OF THE TOY APP REPOSITORY.
+
+*********
+
+23).Services :are android framework component meant for running background tasks that don't need a visual component.
+an activity can start a service which would run even if the activity is shutdowned.
+
+24).When use loaders when use services?:::::Loaders:Tied to Activity lifecycle:Easy to make user interface changes and communicate with the  Activity.
+::::::::Services:when the task that we r doing is decoupled with our user interface(no relation with the UI):Exists even when there is no user interface.
+
+25).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
