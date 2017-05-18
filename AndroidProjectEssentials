@@ -86,6 +86,8 @@ pending intents: theses are the intents used by other apps(eg notificatiomanager
 
 27).Intent-filter:Expression that says what intents should trigger your component.
 
+28).Data binding:
+
 
 
 
