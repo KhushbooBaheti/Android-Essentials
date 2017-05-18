@@ -80,6 +80,11 @@ an activity can start a service which would run even if the activity is shutdown
 ::::::::Services:when the task that we r doing is decoupled with our user interface(no relation with the UI):Exists even when there is no user interface.
 
 25).
+pending intents: theses are the intents used by other apps(eg notificatiomanager) to call up activities of your app as an intent even when your app is not running.
+
+26).Broadcast Reciever: core android component that enables applications to recieve intents that are broadcast by system or by other applications,even when the other components of the application are not running.
+
+27).Intent-filter:Expression that says what intents should trigger your component.
 
 
 
